@@ -1,0 +1,110 @@
+.category-content.events {
+  .post-item {
+    .trapezoid-box {
+      .trapezoid-right {
+        border-bottom: 370px solid $red;
+        opacity: 65%;
+      }
+    }
+  }
+}
+.category-content.archives {
+  .post-item {
+    .trapezoid-box {
+      .trapezoid-right {
+        border-bottom: 370px solid #2c291e;
+        opacity: 95%;
+      }
+    }
+  }
+}
+.category-content.events,
+.category-content.archives {
+  .post {
+    width: 100%;
+  }
+  .post-item {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .trapezoid-box {
+      position: relative;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 420px;
+      .trapezoid-right {
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        z-index: 1;
+        width: 95%; /* 幅 */
+        height: 370px;
+        border-left: 210px solid transparent; /* 右側下辺の伸び */
+        box-sizing: border-box;
+      }
+      .trapezoid-left {
+        position: absolute;
+        left: -20px;
+        z-index: 2;
+        width: 107.5%; /* 幅 */
+        height: 370px;
+        border-top: 370px solid $gold; /* 高さ */
+        border-right: 210px solid transparent; /* 右側下辺の伸び */
+        box-sizing: border-box;
+        opacity: 85%;
+      }
+      .event-inner {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 420px;
+        padding: 35px 0;
+        .event-header {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          height: 40px;
+          p {
+            padding-bottom: 0;
+            line-height: 1em;
+            &.date {
+              color: $black;
+              font: {
+                family: "minerva-modern", sans-serif;
+                size: 1em;
+                weight: 700;
+              }
+            }
+            &.venue {
+              color: $white;
+              font: {
+                family: "minerva-modern", sans-serif;
+                size: 1.5em;
+                weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+    img {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      @include ui_shadow();
+    }
+  }
+}

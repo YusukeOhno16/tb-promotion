@@ -1,0 +1,69 @@
+.category-content.media {
+  .post-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    pointer-events: auto;
+    text-decoration: none;
+    padding-bottom: 30px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    .post-header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 20px;
+      p {
+        padding-bottom: 0;
+        line-height: 0.5em;
+      }
+      .date {
+        display: grid;
+        place-items: center;
+        width: 110px;
+        height: 20px;
+        padding: 0 10px;
+        background: $gold;
+        color: $black;
+        text-align: justify;
+        font: {
+          size: 0.75em;
+          weight: 500;
+        }
+      }
+      .media-name {
+        display: grid;
+        place-items: center;
+        width: auto;
+        height: 20px;
+        margin-left: 10px;
+        color: $gold;
+        font: {
+          size: 0.75em;
+          weight: 500;
+        }
+      }
+    }
+    .media-text {
+      padding-top: 10px;
+      color: $white;
+      &::after {
+        display: inline-block;
+        width: 20px;
+        height: 1em;
+        margin-left: 10px;
+        content: "\f08e";
+        color: $white;
+        font: {
+          family: "Font Awesome 6 Pro";
+        }
+      }
+    }
+  }
+}

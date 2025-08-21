@@ -1,0 +1,86 @@
+@mixin ui_shadow() {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+@mixin btn_center() {
+  width: 100%;
+  max-width: $wid-m;
+  display: grid;
+  place-items: center;
+  button {
+    width: 100%;
+    a {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 49px;
+      border: 1px solid $gold;
+      background: transparent;
+      color: $gold;
+      font: {
+        size: 13px;
+        weight: 500;
+      }
+      text-decoration: none;
+      letter-spacing: 1px;
+      line-height: 1em;
+      &:hover {
+        background: $gold;
+        color: $white;
+      }
+    }
+  }
+}
+
+@mixin btn_right {
+  width: 100%;
+  display: grid;
+  place-items: center flex-end;
+  button {
+    width: 160px;
+    height: 49px;
+    a {
+      display: grid;
+      place-items: center;
+      width: 160px;
+      height: 49px;
+      border: 1px solid $gold;
+      background: $black;
+      color: $gold;
+      font: {
+        size: 13px;
+        weight: 500;
+      }
+      text-decoration: none;
+      letter-spacing: 1px;
+      line-height: 1em;
+      &:hover {
+        background: $gold;
+        color: $white;
+      }
+    }
+  }
+}
+
+.return-home {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 200;
+  padding: 80px 20px 120px 20px;
+}
+
+.home-bottom {
+  padding-bottom: 200px;
+}
+
+.btn-center {
+  @include btn_center();
+  &.p-top {
+    padding-top: 20px;
+  }
+}
+
+.btn-right {
+  @include btn_right();
+}

@@ -1,0 +1,143 @@
+@import url("https://use.typekit.net/ulr1prd.css");
+
+/*
+font-family: "minerva-modern", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "rogue-sans-ext", sans-serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: "magistral", sans-serif;
+font-weight: 800;
+font-style: italic;
+
+font-family: "sui-generis", sans-serif;
+font-weight: 700;
+font-style: italic;
+
+font-family: "sui-generis", sans-serif;
+font-weight: 900;
+font-style: italic;
+
+font-family: "guildhall", sans-serif;
+font-weight: 500;
+font-style: italic;
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
+/** color **/
+$white: #fff;
+$black: #000;
+$red: #f00;
+$gold: #d0b162;
+$link: #00f;
+$del: #98a6b5;
+$dark: #2c291e;
+
+/** layout **/
+$h-sp: 88px;
+$f-sp: 260px;
+$page-wid: 100%;
+$wid-m: 420px;
+
+/** breakpoint **/
+$breakpoint: (
+  "sp": "screen and (max-width: 479px)",
+  "tb": "screen and (min-width: 480px)",
+  "pc": "screen and (min-width: 980px)",
+) !default;
+
+@mixin mq($targetdevice: sp) {
+  @media #{map-get($breakpoint, $targetdevice)} {
+    @content;
+  }
+}
+
+@mixin resp($targetdevice: sp) {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin tbp_grad() {
+  color: $gold; //非対応のブラウザでの文字色を設定
+  background: -webkit-linear-gradient(
+    90deg,
+    #aa8546,
+    #ffe893,
+    #aa8546
+  ); //背景色にグラデーションを指定
+  -webkit-background-clip: text; //テキストでくり抜く
+  -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
+}
+
+@mixin tbp_title($size, $weight) {
+  font: {
+    family: "minerva-modern", sans-serif;
+    size: $size;
+    weight: $weight;
+  }
+}
+
+@mixin tbp_fightername() {
+  font: {
+    family: "guildhall", sans-serif;
+    size: 24px;
+    weight: 500;
+    style: italic;
+  }
+}
+
+@mixin fixed_bkgd($filepath) {
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    //height: -webkit-fill-available;
+    background: {
+      repeat: no-repeat;
+      position: 50% 100%;
+      image: url($filepath);
+      size: cover;
+    }
+  }
+}
+
+.category-events {
+  @include fixed_bkgd("assets/img/bg-events-sp.jpg");
+}
+.category-archives {
+  @include fixed_bkgd("assets/img/bg-archives-sp.jpg");
+}
+.category-press {
+  @include fixed_bkgd("assets/img/bg-press-sp.jpg");
+}
+.category-media {
+  @include fixed_bkgd("assets/img/bg-media-sp.jpg");
+}
+#post-177 {
+  @include fixed_bkgd("assets/img/lp2023-0513/okada-manila-bg.jpg");
+}
+
+@include mq(pc) {
+  .category-events {
+    @include fixed_bkgd("assets/img/bg-events-pc.jpg");
+  }
+  .category-archives {
+    @include fixed_bkgd("assets/img/bg-archives-pc.jpg");
+  }
+  .category-press {
+    @include fixed_bkgd("assets/img/bg-press-pc.jpg");
+  }
+  .category-media {
+    @include fixed_bkgd("assets/img/bg-media-pc.jpg");
+  }
+}

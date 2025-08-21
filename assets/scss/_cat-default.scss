@@ -1,0 +1,57 @@
+.category-content.press,
+.category-content.judge {
+  .post-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 100%;
+    height: auto;
+    border: 1px solid $gold;
+    padding: 10px;
+    pointer-events: auto;
+    text-decoration: none;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      width: 150px;
+      height: 125px;
+      object-fit: cover;
+    }
+    .post-info {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 125px;
+      .date {
+        display: grid;
+        place-items: center;
+        width: 110px;
+        height: 20px;
+        padding: 0 10px;
+        background: $gold;
+        color: $black;
+        text-align: justify;
+        font: {
+          size: 0.75em;
+          weight: 500;
+        }
+      }
+      .title {
+        padding: 5px 0;
+        font: {
+          size: 0.9em;
+        }
+      }
+      .description {
+        font: {
+          size: 0.75em;
+        }
+      }
+    }
+  }
+}

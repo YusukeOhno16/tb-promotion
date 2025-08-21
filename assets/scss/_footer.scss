@@ -1,0 +1,56 @@
+footer#root {
+  position: relative;
+  z-index: 900;
+  width: 100%;
+  .footer-frame {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background: {
+      image: url(assets/svg/frame-bottom-sp.svg);
+      position: bottom center;
+      repeat: no-repeat;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+    copy {
+      position: absolute;
+      bottom: 18px;
+      right: 10px;
+      color: $gold;
+      transform: rotate(-5deg);
+      font: {
+        family: "minerva-modern", sans-serif;
+        size: 0.7em;
+        weight: 700;
+      }
+    }
+  }
+}
+
+.ticket {
+  position: fixed;
+  z-index: 500;
+  bottom: 10px;
+  left: 10px;
+  width: 240px;
+  height: 135px;
+  a {
+    display: inline-block;
+    width: 240px;
+    height: 135px;
+    border: 2px solid $gold;
+    background: {
+      image: url(assets/img/banner/2023-0513-ticket.jpg);
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+}
+

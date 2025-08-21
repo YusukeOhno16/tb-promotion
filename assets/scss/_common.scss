@@ -1,0 +1,143 @@
+/** パンくず **/
+.breadcrumbs {
+  position: relative;
+  z-index: 110;
+  padding: 0 20px 40px 20px;
+  span {
+    font: {
+      size: 12px;
+    }
+    a {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  span[property="name"] {
+    display: inline-block;
+    padding: 0;
+    margin-top: -3px;
+    vertical-align: middle;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+header.category-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+  img {
+    width: 36px;
+    height: 36px;
+  }
+  .header-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: auto;
+    height: 36px;
+    margin-left: 10px;
+    h1 {
+      @include tbp_grad();
+      @include tbp_title(24px, 700);
+      padding-bottom: 0;
+      line-height: 1em;
+    }
+    p {
+      line-height: 1em;
+      letter-spacing: 1px;
+      color: $gold;
+      font: {
+        size: 10px;
+      }
+    }
+  }
+}
+
+/** カテゴリー一覧のページネイション **/
+nav.pagination {
+  h2.screen-reader-text {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 5px;
+    width: 100%;
+    padding-top: 20px;
+    a,
+    span {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      font: {
+        size: 1em;
+        weight: 500;
+      }
+      line-height: 1em;
+    }
+    a {
+      color: $gold;
+      &.nextpostslink,
+      &.previouspostslink {
+        width: 20px;
+      }
+      text-decoration: none;
+      i {
+        color: $gold;
+        font: {
+          size: 1.25em;
+        }
+      }
+    }
+    span {
+      color: $black;
+      background: $gold;
+      border-radius: 18px;
+    }
+  }
+}
+
+.simple-box {
+  width: 100%;
+  padding-bottom: 60px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.sandp {
+  width: 100%;
+  .logo-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    .logo {
+      box-sizing: border-box;
+      display: grid;
+      place-items: center;
+      width: 48.5%;
+      height: 105px;
+      background: $white;
+      border: 2px solid $gold;
+      img {
+        width: auto;
+        max-width: 90%;
+        height: auto;
+        max-height: 100px;
+      }
+    }
+  }
+}

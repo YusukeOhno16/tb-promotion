@@ -1,0 +1,43 @@
+.entry-content {
+  p {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  a {
+    color: $white;
+  }
+}
+
+.e-mailit_bottom_toolbox {
+  width: 100%;
+  max-width: 480px;
+  padding: 30px 0 80px 0;
+  border-top: 1px solid $gold;
+  &::before {
+    content: "このページを共有する";
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 30px;
+    text-align: center;
+    color: $white;
+    font: {
+      size: 0.85em;
+      weight: 500;
+    }
+  }
+  .e-mailit_toolbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+}

@@ -1,0 +1,55 @@
+* {
+  color: $white;
+  font: {
+    family: "Noto Sans JP", sans-serif;
+    size: 0.9em;
+    weight: 500;
+  }
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+  &:target {
+    scroll-margin-top: 0;
+  }
+}
+
+body {
+  /*
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  */
+  &.active {
+    overflow: hidden;
+  }
+  background: $black;
+}
+
+#page {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header#root,
+main#top {
+  width: 100%;
+  margin: 0;
+}
+
+main#top {
+  height: auto;
+  min-height: 100vh;
+  &.ari {
+    padding-top: 120px;
+  }
+  &.nashi {
+    padding-top: 0;
+  }
+}

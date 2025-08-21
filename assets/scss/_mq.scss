@@ -1,0 +1,144 @@
+@include mq(tb) {
+  .breadcrumbs {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0 20px 40px 30px;
+  }
+  .menu-btn {
+    margin-left: calc(100% - 80px);
+    right: inherit;
+  }
+  header#root {
+    .header-frame {
+      background: {
+        image: url(assets/svg/frame-top-pc.svg);
+      }
+    }
+  }
+  footer#root {
+    .footer-frame {
+      background: {
+        image: url(assets/svg/frame-bottom-pc.svg);
+      }
+    }
+  }
+  #begining {
+    .banner {
+      width: 40%;
+      //max-width: 400px;
+    }
+  }
+  article {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .return-home {
+    width: 640px;
+    margin: 0 auto;
+  }
+  .btn-center {
+    &.p-top {
+      padding-top: 60px;
+    }
+  }
+}
+
+@include mq(pc) {
+  .breadcrumbs {
+    padding: 0 20px 40px 50px;
+  }
+
+  .menu-btn,
+  nav#menu-screen {
+    display: none;
+  }
+
+  header#root {
+    width: 100%;
+    height: 74.75px;
+    .header-frame {
+      background: {
+        image: url(assets/svg/frame-top-pc.svg);
+      }
+    }
+    .header-ui {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      nav#menu-bar {
+        display: block;
+        padding-right: 30px;
+        .pc-menu {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0 20px;
+          height: 74.75px;
+          .header-text {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: auto;
+            height: 36px;
+            text-decoration: none;
+            h1 {
+              color: $gold; //非対応のブラウザでの文字色を設定
+              background: -webkit-linear-gradient(
+                90deg,
+                #aa8546,
+                #ffe893,
+                #aa8546
+              ); //背景色にグラデーションを指定
+              -webkit-background-clip: text; //テキストでくり抜く
+              -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
+              padding-bottom: 5px;
+              line-height: 1em;
+              font: {
+                family: "minerva-modern", sans-serif;
+                size: 14px;
+                weight: 700;
+              }
+            }
+            p {
+              line-height: 1em;
+              letter-spacing: 1px;
+              color: $gold;
+              font: {
+                size: 9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer#root {
+    .footer-frame {
+      background: {
+        image: url(assets/svg/frame-bottom-pc.svg);
+      }
+    }
+  }
+  article {
+    padding: 0 50px;
+    &#wpcf7 {
+      margin-top: 40px;
+      padding: 40px 70px 30px 70px;
+      .resp-box {
+        padding-bottom: 40px;
+        .right {
+          padding-top: 0;
+        }
+      }
+      .form-item.accept {
+        display: grid;
+        place-items: center;
+        padding: 0;
+      }
+    }
+  }
+}
