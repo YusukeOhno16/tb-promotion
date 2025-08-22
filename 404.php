@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<!-- Test comment for PR creation functionality -->
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
