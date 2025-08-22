@@ -139,7 +139,7 @@
     <div id="page">
 		
     <div class="snsFixed">
-        Follow us：
+        Follow us on social media：
         <ul>
             <li><a href="https://twitter.com/TB_PROMOTION" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></li>
             <li><a href="https://www.tiktok.com/@tbpromotion?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a></li>
